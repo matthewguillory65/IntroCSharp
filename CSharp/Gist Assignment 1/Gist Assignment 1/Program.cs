@@ -12,18 +12,18 @@ namespace Gist_Assignment_1
         {
             List<int> nums = new List<int>();
             List<int> numb = new List<int>();
-            for(int i = 0; i < 101; i++)
+            for (int i = 0; i < 101; i++)
             {
-                if(i % 2 == 0)
-                nums.Add(i);
+                if (i % 2 == 0)
+                    nums.Add(i);
             }
 
-            foreach(var num in nums)
+            foreach (var num in nums)
             {
                 Console.WriteLine(nums.ElementAt(i));
             }
-            
-             for(int j = 0; j < 101; j++)
+
+            for (int j = 0; j < 101; j++)
             {
                 numb.Add(j);
 

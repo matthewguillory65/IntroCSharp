@@ -46,9 +46,6 @@ namespace IntroCSharp
             //int m_Age;
             //Console.WriteLine(s.Age);
 
-
-            Students n = new IntroCSharp.Students();
-
             while (input != 'q')
             {
                 Console.WriteLine("Type something, anything for that matter. \n");

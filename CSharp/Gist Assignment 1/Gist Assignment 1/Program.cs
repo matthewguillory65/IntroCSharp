@@ -10,25 +10,21 @@ namespace Gist_Assignment_1
     {
         static void Main(string[] args)
         {
+            int o = 0;
             List<int> nums = new List<int>();
-            List<int> numb = new List<int>();
-            for (int i = 0; i < 101; i++)
+            for (int i = 0; i <= 100; i+=2)
             {
-                if (i % 2 == 0)
-                    nums.Add(i);
+                 nums.Add(i);
+                Console.WriteLine(nums.ElementAt(o));
+                o++;
             }
 
-            foreach (var num in nums)
+            int w = 10;
+            for (int j = 0; j <= 40; j++)
             {
-                Console.WriteLine(nums.ElementAt(i));
-            }
-
-            for (int j = 0; j < 101; j++)
-            {
-                numb.Add(j);
-
-                if (j % 10 == 0) numb.Remove(j);
-                    Console.WriteLine(numb.ElementAt(j));
+                nums.Remove(w);
+                Console.WriteLine(nums.ElementAt(j));
+                w += 10;
             }
             Console.ReadLine();
         }

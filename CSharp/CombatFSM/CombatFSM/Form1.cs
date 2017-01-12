@@ -12,13 +12,15 @@ namespace CombatFSM
 {
     public partial class Form1 : Form
     {
-        Person Cloud = new Person();
-        Person Tifa = new Person();
-        Person Barrett = new Person();
+        Party1 Cloud = new Party1();
+        Party1 Tifa = new Party1();
+        Party1 Barrett = new Party1();
 
-        People Aeris = new People();
-        People Vincent = new People();
-        People Caitsith = new People();
+        Party2 Aeris = new Party2();
+        Party2 Vincent = new Party2();
+        Party2 Caitsith = new Party2();
+
+        Combat combat = new Combat();
         
         public Form1()
         {
@@ -43,20 +45,19 @@ namespace CombatFSM
             {
                 case state.ATTACK:
                     {
-                        Cloud.Attack();
+                        combat.Attack();
                         break;
                     }
                 case state.DEFEND:
                     {
-                        Cloud.Defend();
+                        combat.Defend();
                         break;
                     }
                 case state.INIT:
                     {
-                        Cloud.EndofTurn();
+                        combat.EndofTurn();
                         break;
                     }
-                    break;
             }
 
 
@@ -71,12 +72,12 @@ namespace CombatFSM
             public void Defend() { }
         }
 
-        public class Person : Combat
+        public class Party1 : Combat
         {
 
         }
 
-        public class People : Combat
+        public class Party2 : Combat
         {
 
         }

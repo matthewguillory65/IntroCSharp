@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1
             
         }
 
-        public int exp = 2;
+        public int exp = 13;
 
         public int exp2 = 0;
 
@@ -73,7 +73,7 @@ namespace WindowsFormsApplication1
         private void Experience()
         {
             textBox2.Text = "Exp: " + exp;
-            exp += exp;
+            exp += 13;
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
@@ -94,13 +94,29 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void progressBar2_Click(object sender, EventArgs e)
         {
-            Lvl += 50;
-            textBox1.Text = "Lvl " + Lvl;
-            Experience();
+
         }
 
-        
+        private void button4_Click(object sender, EventArgs e)
+        {
+            progressBar3.Value += 10;
+
+            if (progressBar3.Value >= 100)
+            {
+                progressBar3.Value = 0;
+            }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            progressBar2.Value += 10;
+
+            if (progressBar2.Value >= 100)
+            {
+                progressBar2.Value = 0;
+            }
+        }
     }
 }

@@ -100,5 +100,7 @@ namespace WindowsFormsApplication1
             textBox1.Text = "Lvl " + Lvl;
             Experience();
         }
+
+        
     }
 }

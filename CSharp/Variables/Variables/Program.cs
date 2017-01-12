@@ -19,10 +19,12 @@ namespace Variables
             int a = nuke[0];
             int b = nuke[1];
             a = a + b;
+            b = a - b;
+            a = a - b;
             
             Console.WriteLine("Consider them switched.");
-            Console.WriteLine(b = a - b);
-            Console.WriteLine(a = a - b);
+            Console.WriteLine(a);
+            Console.WriteLine(b);
             //Problem2:
             //Ask for 5 numbers, then find the average of the numbers given
             //(Convert.ToInt32(Console.ReadLine()));

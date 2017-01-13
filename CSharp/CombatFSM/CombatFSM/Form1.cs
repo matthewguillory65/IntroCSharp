@@ -65,6 +65,10 @@ namespace CombatFSM
 
         public class Combat
         {
+            public int health;
+
+            public bool alive;
+
             public void EndofTurn() { }
 
             public void Attack() { }
@@ -82,5 +86,188 @@ namespace CombatFSM
 
         }
 
+        private void progressBar4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            progressBar4.Value += 10;
+        }
+
+        private void progressBar3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            progressBar3.Value += 10;
+        }
+
+        private void progressBar2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if(progressBar5.Value > 0)
+            {
+                progressBar5.Value -= 10;
+            }
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            progressBar1.Value += 10;
+        }
+
+private void progressBar6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            progressBar6.Value += 10;
+        }
+       
+ private void progressBar5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (progressBar2.Value > 0)
+            {
+                progressBar2.Value -= 10;
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (progressBar6.Value > 0)
+            {
+                progressBar6.Value -= 10;
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (progressBar1.Value > 0)
+            {
+                progressBar1.Value -= 10;
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            progressBar2.Value += 10;
+            if(progressBar2.Value >= 100)
+            {
+                progressBar2.Value = 100;
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (progressBar3.Value > 0)
+            {
+                progressBar3.Value -= 10;
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (progressBar4.Value > 0)
+            {
+                progressBar4.Value -= 10;
+            }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            progressBar5.Value += 10;
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            if (progressBar2.Value > 0)
+            {
+                progressBar2.Value -= 10;
+            }
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if (progressBar3.Value > 0)
+            {
+                progressBar3.Value -= 10;
+            }
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            if (progressBar4.Value > 0)
+            {
+                progressBar4.Value -= 10;
+            }
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            if (progressBar1.Value > 0)
+            {
+                progressBar1.Value -= 10;
+            }
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            if (progressBar6.Value > 0)
+            {
+                progressBar6.Value -= 10;
+            }
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            if (progressBar5.Value > 0)
+            {
+                progressBar5.Value -= 10;
+            }
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            if (progressBar1.Value > 0)
+            {
+                progressBar1.Value -= 10;
+            }
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            if (progressBar6.Value > 0)
+            {
+                progressBar6.Value -= 10;
+            }
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            if (progressBar5.Value > 0)
+            {
+                progressBar5.Value -= 10;
+            }
+        }
     }
 }

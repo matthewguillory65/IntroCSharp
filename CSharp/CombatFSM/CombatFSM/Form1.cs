@@ -25,94 +25,24 @@ namespace CombatFSM
         public Form1()
         {
             InitializeComponent();
+            Party Pa = new Party();
+            Player Cloud = new Player();
+            Pa.AddPlayer(Cloud);
+            Player Tifa = new Player();
+            Pa.AddPlayer(Tifa);
+            Player Barrett = new Player();
+            Pa.AddPlayer(Barrett);
+            Player Aeris = new Player();
+            Pa.AddPlayer(Aeris);
+            Player Vincent = new Player();
+            Pa.AddPlayer(Vincent);
+            Player Caitsith = new Player();
+            Pa.AddPlayer(Caitsith);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
-        }
-
-        public enum state : int
-        {
-            INIT = 0,
-            ATTACK = 1,
-            DEFEND = 2,
-        }
-
-        public void SetState(state state)
-        {
-            switch(state)
-            {
-                case state.ATTACK:
-                    {
-                        combat.Attack();
-                        break;
-                    }
-                case state.DEFEND:
-                    {
-                        combat.Defend();
-                        break;
-                    }
-                case state.INIT:
-                    {
-                        combat.EndofTurn();
-                        break;
-                    }
-            }
-        }
-
-        public class Combat
-        {
-            public void EndofTurn() { }
-
-            public void Attack() { }
-
-            public void Defend() { }
-        }
-
-        public class Party : Combat
-        {
-
-        }
-
-        public class Player : Combat
-        {
-            delegate void OnEndTurn();
-
-            OnEndTurn onEndTurn;
-
-            void EndTurn()
-            {
-                if(onEndTurn != null)
-                {
-                    onEndTurn.Invoke();
-                }
-            }
-
-            delegate void OnPartyEnd();
-
-            OnPartyEnd onPartyEnd;
-
-            void EndParty()
-            {
-                if(onPartyEnd != null)
-                {
-                    onPartyEnd.Invoke();
-                }
-            }
-
-            delegate void Nextplayer();
-
-            Nextplayer nextPlayer;
-
-            bool NextPlayer()
-            {
-                if(nextPlayer != null)
-                {
-                    nextPlayer.Invoke();
-                }
-                return true;
-            }
         }
 
         private void progressBar4_Click(object sender, EventArgs e)
@@ -438,5 +368,11 @@ namespace CombatFSM
         {
             
         }
-    }
+    }  
+    /// <summary>
+        /// Only has 3 Functions: Attack, Defend, and EndofTurn
+        /// </summary>
+
+
+    
 }

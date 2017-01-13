@@ -95,13 +95,22 @@ namespace CombatFSM
 
             void EndParty()
             {
-
+                if(onPartyEnd != null)
+                {
+                    onPartyEnd.Invoke();
+                }
             }
+
+            delegate void Nextplayer();
+
+            Nextplayer nextPlayer;
 
             bool NextPlayer()
             {
-
-
+                if(nextPlayer != null)
+                {
+                    nextPlayer.Invoke();
+                }
                 return true;
             }
         }

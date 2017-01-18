@@ -14,7 +14,11 @@ namespace CombatFSM
             ATTACK = 1,
             DEFEND = 2,
         }
-        public Combat() { }
+        public Combat()
+        {
+            Attack();
+            Defend();
+        }
         public void EndofTurn() { }
 
         public void Attack() { }
@@ -43,14 +47,6 @@ namespace CombatFSM
         //    }
         //}
     }
-
-
-   
-
-
-
-
-
     public class Party
     {
         public List<Player> Players = new List<Player>();
@@ -116,6 +112,14 @@ namespace CombatFSM
             {
                 onPartyEnd.Invoke();
             }
+        }
+    }
+
+    public class Function
+    {
+        public void Functions()
+        {
+            
         }
     }
 }

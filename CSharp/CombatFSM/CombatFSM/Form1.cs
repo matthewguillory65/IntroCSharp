@@ -27,16 +27,16 @@ namespace CombatFSM
             InitializeComponent();
             Party Pa = new Party();
             Player Cloud = new Player();
-            Pa.AddPlayer(Cloud);
             Player Tifa = new Player();
-            Pa.AddPlayer(Tifa);
             Player Barrett = new Player();
-            Pa.AddPlayer(Barrett);
             Player Aeris = new Player();
-            Pa.AddPlayer(Aeris);
             Player Vincent = new Player();
-            Pa.AddPlayer(Vincent);
             Player Caitsith = new Player();
+            Pa.AddPlayer(Cloud);
+            Pa.AddPlayer(Tifa);
+            Pa.AddPlayer(Barrett);
+            Pa.AddPlayer(Aeris);
+            Pa.AddPlayer(Vincent);
             Pa.AddPlayer(Caitsith);
         }
 
@@ -44,7 +44,6 @@ namespace CombatFSM
         {
 
         }
-
         private void progressBar4_Click(object sender, EventArgs e)
         {
 
@@ -78,6 +77,10 @@ namespace CombatFSM
         private void button1_Click(object sender, EventArgs e)
         {
             progressBar4.Value += 10;
+            if(progressBar4.Value > 100)
+            {
+                progressBar4.Value = 100;
+            }
         }
 
         /// <summary>
@@ -88,6 +91,10 @@ namespace CombatFSM
         private void button2_Click(object sender, EventArgs e)
         {
             progressBar3.Value += 10;
+            if(progressBar3.Value > 100)
+            {
+                progressBar3.Value = 100;
+            }
         }
 
         /// <summary>
@@ -98,6 +105,10 @@ namespace CombatFSM
         private void button4_Click(object sender, EventArgs e)
         {
             progressBar1.Value += 10;
+            if (progressBar1.Value > 100)
+            {
+                progressBar1.Value = 100;
+            }
         }
 
         /// <summary>
@@ -108,6 +119,10 @@ namespace CombatFSM
         private void button6_Click(object sender, EventArgs e)
         {
             progressBar6.Value += 10;
+            if (progressBar6.Value > 100)
+            {
+                progressBar6.Value = 100;
+            }
         }
 
         /// <summary>
@@ -118,6 +133,10 @@ namespace CombatFSM
         private void button9_Click(object sender, EventArgs e)
         {
             progressBar2.Value += 10;
+            if (progressBar2.Value > 100)
+            {
+                progressBar2.Value = 100;
+            }
         }
 
         /// <summary>
@@ -128,6 +147,10 @@ namespace CombatFSM
         private void button12_Click(object sender, EventArgs e)
         {
             progressBar5.Value += 10;
+            if (progressBar5.Value > 100)
+            {
+                progressBar5.Value = 100;
+            }
         }
 
         /// <summary>
@@ -364,15 +387,12 @@ namespace CombatFSM
             }
         }
 
+        /// <summary>
+        /// Ending of the player's turn
+        /// </summary>
         public void EndTurn()
         {
             
         }
-    }  
-    /// <summary>
-        /// Only has 3 Functions: Attack, Defend, and EndofTurn
-        /// </summary>
-
-
-    
+    }   
 }

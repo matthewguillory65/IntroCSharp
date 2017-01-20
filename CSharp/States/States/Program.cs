@@ -15,7 +15,12 @@ namespace Work
         }
     }
 
-    class Lights
+    public class FSM {
+
+    }
+
+
+    public class Lights
     {
         public enum LightsState
         {
@@ -26,18 +31,18 @@ namespace Work
             END = 9000,
         }
 
-        public void Red()
-        {
+        public void Red() {
 
+            
         }
 
-        public void Green()
-        {
+        public void Green() {
 
+             
         }
 
-        public void Yellow()
-        {
+        public void Yellow() {
+            
             
         }
 

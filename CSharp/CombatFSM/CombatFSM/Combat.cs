@@ -19,11 +19,39 @@ namespace CombatFSM
             Attack();
             Defend();
         }
-        public void EndofTurn() { }
 
-        public void Attack() { }
+        public void EndofTurn()
+        {
+            
+        }
 
-        public void Defend() { }
+        public void Attack()
+        {
+
+        }
+
+        public void Defend()
+        {
+
+        }
+
+        public void SetState()
+        {
+            switch()
+            {
+                case CombatState.ATTACK:
+                    {
+                        Attack();
+                        break;
+                    }
+
+                case CombatState.DEFEND:
+                    {
+                        Defend();
+                        break;
+                    }
+            }
+        }
 
         //public void SetState(State state)
         //{

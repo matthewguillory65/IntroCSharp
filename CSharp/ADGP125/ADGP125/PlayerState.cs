@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ADGP125
 {
     class PlayerState : IPlayerTurn
-    {
+    { 
         public void BattleInitiation()
         {
             throw new NotImplementedException();

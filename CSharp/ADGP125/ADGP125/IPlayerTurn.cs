@@ -14,10 +14,6 @@ namespace ADGP125
 
         void BattleInitiation();
 
-        void PlayerAttack();
-
-        void OpponentsAttack();
-
         void SwitchTurn();
 
         void SwitchPokemon();

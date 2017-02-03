@@ -7,31 +7,29 @@ using System.Diagnostics;
 
 namespace ADGP125
 {
-    class YellowLight : ILight
+    public class YellowLight : ILight
     {
-        public YellowLight(FSM fsm) { }
-        public Stopwatch swy = new Stopwatch();
-        private FSM fsm = new FSM();
+        public YellowLight() { }
+        Stopwatch swy;
+        private FSM Light;
         public void Enter()
         {
-            swy.Reset();
             swy.Start();
         }
 
-        //Sets to RedLight
         public void RedLightFunction()
         {
-            fsm.currentState = fsm.redlight;
+            Light.currentState = Light.redlight;
         }
 
         public void GreenLightFunction()
         {
-
+            
         }
 
         public void YellowLightFunction()
         {
-
+            
         }
 
         public void Update()
@@ -42,7 +40,9 @@ namespace ADGP125
 
         public void Exit()
         {
-            fsm.currentState = fsm.redlight;
+            Light.currentState = Light.redlight;
         }
+
+        
     }
 }

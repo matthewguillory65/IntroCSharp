@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,13 +18,18 @@ namespace ADGP125
             FSM fsm = new FSM();
             RedLight redLightState = new RedLight();
 
-
+        
 
             fsm.StartMachine(redLightState);
 
+            
+
+            //while (true)
+            //    fsm.Update();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new LightSystem());
         }
     }
 }

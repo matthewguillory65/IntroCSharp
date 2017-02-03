@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace ADGP125
 {
-    public interface ILight
-    {
+    public interface ILight {
         void Enter();
         void RedLightFunction();
         void GreenLightFunction();

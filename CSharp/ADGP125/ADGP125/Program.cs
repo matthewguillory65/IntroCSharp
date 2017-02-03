@@ -3,51 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ADGP125
 {
-    class Program : IPlayerTurn
+    static class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
         {
-
-        }
-
-        public void BattleInitiation()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void MoveSelection()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void OpponentsAttack()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void PlayerAttack()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SwitchPokemon()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SwitchTurn()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void UpdatePlayerState()
-        {
-            throw new NotImplementedException();
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new LightSystem());
         }
     }
-
-
 }

@@ -15,8 +15,7 @@ namespace ADGP125
         private FSM fsm = new FSM();
         public void Enter()
         {
-            swr.Reset();
-            swr.Start();
+            swr.Restart();
         }
 
         public void RedLightFunction()

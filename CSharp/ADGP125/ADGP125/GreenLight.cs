@@ -9,13 +9,12 @@ namespace ADGP125
 {
     class GreenLight :ILight
     {
-        public GreenLight(FSM fsm) { }
+        public GreenLight() { }
         public Stopwatch swg = new Stopwatch();
         private FSM fsm = new FSM();
         public void Enter()
         {
-            swg.Reset();
-            swg.Start();
+            swg.Restart();
         }
 
         public void RedLightFunction()

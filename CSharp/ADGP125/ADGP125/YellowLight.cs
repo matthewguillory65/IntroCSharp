@@ -9,19 +9,18 @@ namespace ADGP125
 {
     class YellowLight : ILight
     {
-        public YellowLight(FSM fsm) { }
+        public YellowLight() { }
         public Stopwatch swy = new Stopwatch();
         private FSM fsm = new FSM();
         public void Enter()
         {
-            swy.Reset();
-            swy.Start();
+            swy.Restart();
         }
 
         //Sets to RedLight
         public void RedLightFunction()
         {
-            fsm.currentState = fsm.redlight;
+            fsm.currentState = fsm.RedLight;
         }
 
         public void GreenLightFunction()
@@ -42,7 +41,7 @@ namespace ADGP125
 
         public void Exit()
         {
-            fsm.currentState = fsm.redlight;
+            fsm.currentState = fsm.RedLight;
         }
     }
 }

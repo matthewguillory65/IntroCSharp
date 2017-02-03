@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace ADGP125
 {
@@ -10,19 +11,25 @@ namespace ADGP125
     {
         public FSM() { }
         public ILight currentState;
-        public RedLight redlight;
-        public GreenLight greenlight;
-        public YellowLight yellowlight;
+        public ILight greenlight;
+        public ILight yellowlight;
+        public ILight RedLight;
+        //public FSM fsm = new FSM();
+        
+        void Update()
+        {
+            currentState = RedLight;
+        }
+
+        public void Enter(RedLight redlight)
+        {
+            
+        }
 
         public void StartMachine(ILight state)
         {
             currentState = state;
-            currentState.Enter();
-        }
-
-        void Update()
-        {
-
+            currentState.Enter(redlight);
         }
     }
 }

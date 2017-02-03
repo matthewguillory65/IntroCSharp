@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace ADGP125
 {
-    class Green : ILight
+    class GreenLight : ILight
     {
         public void Enter()
         {

@@ -25,9 +25,9 @@ namespace ADGP125
             
         }
 
-        public void StartMachine(ILight state)
+        public void StartMachine()
         {
-            currentState = state;
+            currentState = redLight;
             currentState.Enter(currentState);
         }
     }

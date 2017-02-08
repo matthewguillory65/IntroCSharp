@@ -19,7 +19,7 @@ namespace ADGP125
 
             
 
-            fsm.StartMachine(redLightState);
+            fsm.StartMachine();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

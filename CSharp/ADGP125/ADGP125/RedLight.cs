@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 using System.Diagnostics;
 
 namespace ADGP125
@@ -10,17 +11,18 @@ namespace ADGP125
     class RedLight : ILight
     {
         public RedLight() { }
-
+        
         public Stopwatch swr = new Stopwatch();
         private FSM fsm = new FSM();
         public void Enter()
         {
             swr.Restart();
+            //pictureBox1.BackColor = Color.Green;
         }
 
         public void RedLightFunction()
         {
-
+            
         }
 
         //Sets to GreenLight
@@ -43,6 +45,12 @@ namespace ADGP125
         public void Exit()
         {
             fsm.currentState = fsm.greenlight;
+            
+        }
+
+        public void Enter(ILight currentState)
+        {
+            
         }
     }
 }

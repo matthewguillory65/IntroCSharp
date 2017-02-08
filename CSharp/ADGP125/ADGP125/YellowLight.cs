@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System.Drawing;
 
 namespace ADGP125
 {
@@ -20,7 +21,7 @@ namespace ADGP125
         //Sets to RedLight
         public void RedLightFunction()
         {
-            fsm.currentState = fsm.RedLight;
+            fsm.currentState = fsm.redLight;
         }
 
         public void GreenLightFunction()
@@ -41,7 +42,12 @@ namespace ADGP125
 
         public void Exit()
         {
-            fsm.currentState = fsm.RedLight;
+            fsm.currentState = fsm.redLight;
+        }
+
+        public void Enter(ILight currentState)
+        {
+            
         }
     }
 }

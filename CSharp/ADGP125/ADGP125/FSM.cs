@@ -13,15 +13,14 @@ namespace ADGP125
         public ILight currentState;
         public ILight greenlight;
         public ILight yellowlight;
-        public ILight RedLight;
-        //public FSM fsm = new FSM();
-        
+        public ILight redLight;
+
         void Update()
         {
-            currentState = RedLight;
+            currentState = redLight;
         }
 
-        public void Enter(RedLight redlight)
+        public void Enter()
         {
             
         }
@@ -29,7 +28,7 @@ namespace ADGP125
         public void StartMachine(ILight state)
         {
             currentState = state;
-            currentState.Enter(redlight);
+            currentState.Enter(currentState);
         }
     }
 }

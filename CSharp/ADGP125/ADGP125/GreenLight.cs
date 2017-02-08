@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System.Drawing;
 
 namespace ADGP125
 {
@@ -42,6 +43,12 @@ namespace ADGP125
         public void Exit()
         {
             fsm.currentState = fsm.yellowlight;
+            //pictureBox1.BackColor = Color.Yellow;
+        }
+
+        public void Enter(ILight currentState)
+        {
+            
         }
     }
 }

@@ -22,7 +22,6 @@ namespace ADGP125
         }
         public bool Update()
         {
-
             var elapsed = sw.Elapsed.Seconds;
             Debug.WriteLine("elapsed time for GreenLight: " + elapsed);
             if (elapsed >= 5)
@@ -63,13 +62,10 @@ namespace ADGP125
         }
         public bool Exit(ILight currentState)
         {
-            
             sw.Stop();
             sw.Reset();
             return true;
         }
-
-
     }
     class RedLight : ILight
     {
@@ -83,7 +79,6 @@ namespace ADGP125
         }
         public bool Update()
         {
-
             var elapsed = sw.Elapsed.Seconds;
             Debug.WriteLine("elapsed time of RedLight: " + elapsed);
             if (elapsed >= 5)
@@ -94,11 +89,9 @@ namespace ADGP125
         }
         public bool Exit(ILight currentState)
         {
-
             sw.Stop();
             sw.Reset();
             return true;
-
         }
     }
 }

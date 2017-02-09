@@ -8,11 +8,8 @@ namespace ADGP125
 {
     public interface ILight
     {
-        void RedLightFunction();
-        void GreenLightFunction();
-        void YellowLightFunction();
         void Update();
-        void Exit();
-        void Enter(ILight currentState);
+        bool Exit(ILight currentState);
+        void Enter();
     }
 }

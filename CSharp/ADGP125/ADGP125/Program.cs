@@ -14,13 +14,7 @@ namespace ADGP125
         [STAThread]
         static void Main()
         {
-            FSM fsm = new FSM();
-            RedLight redLightState = new RedLight();
-
             
-
-            fsm.StartMachine();
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

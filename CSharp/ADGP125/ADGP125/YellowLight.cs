@@ -12,42 +12,22 @@ namespace ADGP125
     {
         public YellowLight() { }
         public Stopwatch swy = new Stopwatch();
-        private FSM fsm = new FSM();
+        
         public void Enter()
         {
             swy.Restart();
+            //pictureBox1.BackColor = Color.Yellow;
         }
-
-        //Sets to RedLight
-        public void RedLightFunction()
-        {
-            fsm.currentState = fsm.redLight;
-        }
-
-        public void GreenLightFunction()
-        {
-
-        }
-
-        public void YellowLightFunction()
-        {
-
-        }
-
         public void Update()
         {
+           
+        }
+        public bool Exit(ILight currentState)
+        {
             if (swy.ElapsedMilliseconds >= 7 * 1000)
-                Exit();
-        }
-
-        public void Exit()
-        {
-            fsm.currentState = fsm.redLight;
-        }
-
-        public void Enter(ILight currentState)
-        {
-            
+                return true;
+            else
+                return false;
         }
     }
 }

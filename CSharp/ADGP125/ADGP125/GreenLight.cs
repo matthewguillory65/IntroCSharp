@@ -8,47 +8,28 @@ using System.Drawing;
 
 namespace ADGP125
 {
-    class GreenLight :ILight
+    class GreenLight : ILight
     {
         public GreenLight() { }
         public Stopwatch swg = new Stopwatch();
-        private FSM fsm = new FSM();
+        
         public void Enter()
         {
             swg.Restart();
+            //pictureBox1.Visible == true;
+            //pictureBox1.BackColor = Color.Green;
         }
-
-        public void RedLightFunction()
-        {
-
-        }
-
-        public void GreenLightFunction()
-        {
-
-        }
-
-        //Sets to YellowLight
-        public void YellowLightFunction()
-        {
-            fsm.currentState = fsm.yellowlight;
-        }
-
         public void Update()
         {
-            if (swg.ElapsedMilliseconds >= 53 * 1000)
-                Exit();
-        }
-
-        public void Exit()
-        {
-            fsm.currentState = fsm.yellowlight;
-            //pictureBox1.BackColor = Color.Yellow;
-        }
-
-        public void Enter(ILight currentState)
-        {
             
+        }
+
+        public bool Exit(ILight currentState)
+        {
+            if (swg.ElapsedMilliseconds >= 53 * 1000)
+                return true;
+            else
+                return false;
         }
     }
 }

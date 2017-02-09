@@ -17,6 +17,7 @@ namespace ADGP125
         public GreenLight greenlight = new GreenLight();
         public YellowLight yellowlight = new YellowLight();
         public RedLight redlight = new RedLight();
+        public Stopwatch stopWatch = new Stopwatch();
         public void Start()
         {
             currentState = redlight;
@@ -26,22 +27,14 @@ namespace ADGP125
         }
         void UpdateP()
         {
-            if(currentState.Exit(redlight) == true)
-            {
-                currentState = greenlight;
-            }
-
-            if (currentState.Exit(greenlight) == true)
-            {
-                currentState = yellowlight;
-            }
-
-            if (currentState.Exit(yellowlight) == true)
+            if (currentState.Update())
             {
                 currentState = redlight;
-            }
+                currentState.Enter();
 
-            currentState.Update();
+                currentState = greenlight;
+                currentState.Enter();
+            }
         }
         public void StartMachine()
         {

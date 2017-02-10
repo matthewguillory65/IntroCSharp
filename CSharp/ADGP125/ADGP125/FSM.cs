@@ -27,12 +27,21 @@ namespace ADGP125
         }
         void UpdateP()
         {
-            if (currentState.Update())
+            if (redlight.Update())
             {
-                currentState = redlight;
-                currentState.Enter();
+                redlight.Exit(currentState = greenlight);
+                greenlight.Enter();
+            }
 
-                currentState = greenlight;
+            if (greenlight.Update())
+            {
+                greenlight.Exit(currentState = yellowlight);
+                currentState.Enter();
+            }
+
+            if(yellowlight.Update())
+            {
+                yellowlight.Exit(currentState = redlight);
                 currentState.Enter();
             }
         }

@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace ADGP125
 {
     public partial class Form1 : Form
     {
         FSM fsm;
-        
         public Form1()
         {
             InitializeComponent();
@@ -34,7 +34,7 @@ namespace ADGP125
         }
         public void pictureBox1_Click(object sender, EventArgs e)
         {
-            pictureBox1.BackColor = Color.Red;
+
         }
         public void pictureBox3_Click(object sender, EventArgs e)
         {

@@ -29,6 +29,8 @@ namespace Assessment._4
             Enemy SkeleDragon = new Enemy(240, 160, true);
             Enemy WaterDragon = new Enemy(140, 260, true);
 
+            
+
             List<Heros> Hoomans = new List<Heros>();
             Hoomans.Add(Defender);
             Hoomans.Add(Archer);
@@ -41,9 +43,8 @@ namespace Assessment._4
             Droogons.Add(ArmoredDragon);
             Droogons.Add(SkeleDragon);
             Droogons.Add(WaterDragon);
-            Random Rand = new Random();
-
             Enemy ActiveDroogon = Droogons[currentDroogon];
+            Random Rand = new Random();
         }
 
         public void Attacking(Heros H1, Heros H2, Enemy Dragon)
@@ -101,17 +102,22 @@ namespace Assessment._4
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            textBox1.Text = currentDroogon;
+            textBox1.Text = ActiveDroogon;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            textBox2.Text = currentDroogon.Attack;
+            textBox2.Text = ActiveDroogon.Attack;
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            textBox3.Text = currentDroogon.Defense;
+            textBox3.Text = ActiveDroogon.Defense;
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            textBox4.Text = ActiveDroogon.Alive;
         }
     }
 }

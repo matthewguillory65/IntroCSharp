@@ -31,8 +31,11 @@ namespace Assessment._4
         int m_Attack;
         int m_Defense;
         bool m_Alive;
-        delegate void ImDead();
-        ImDead bythewayImDead;
+
+        public static implicit operator string(Enemy v)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     class Attacks
@@ -43,4 +46,22 @@ namespace Assessment._4
 
         }
     }
+
+    class Singleton
+    {
+        private static readonly Singleton instance = new Singleton();
+
+        private Singleton() { }
+
+        public static Singleton Instance
+        {
+            get
+            {
+                return instance;
+            }
+        }
+    }
+
+
+    
 }

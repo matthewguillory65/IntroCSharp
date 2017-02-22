@@ -12,47 +12,10 @@ namespace Assessment._4
 {
     public partial class Form1 : Form
     {
-        public List<Heros> Hoomans;
-        public List<Enemy> Droogons;
-        public Enemy ActiveDroogon;
-        public Heros ActiveHooman;
-        public Heros ActiveHooman2;
-        public Random Rand;
-        public int currentDroogon;
-        public int currentHooman;
         public Form1()
         {
             InitializeComponent();
-
-            currentDroogon = 0;
-
-            Heros Defender = new Heros(10, 200, true);
-            Heros Archer = new Heros(160, 140, true);
-            Heros Warrior = new Heros(180, 120, true);
-
-            Enemy LavaDragon = new Enemy(300, 180, true);
-            Enemy RockDragon = new Enemy(280, 210, true);
-            Enemy VolticDragon = new Enemy(190, 300, true);
-            Enemy ArmoredDragon = new Enemy(200, 270, true);
-            Enemy SkeleDragon = new Enemy(240, 160, true);
-            Enemy WaterDragon = new Enemy(140, 260, true);
-
-            Hoomans = new List<Heros>();
-            Hoomans.Add(Defender);
-            Hoomans.Add(Archer);
-            Hoomans.Add(Warrior);
-
-            Droogons = new List<Enemy>();
-            Droogons.Add(LavaDragon);
-            Droogons.Add(RockDragon);
-            Droogons.Add(VolticDragon);
-            Droogons.Add(ArmoredDragon);
-            Droogons.Add(SkeleDragon);
-            Droogons.Add(WaterDragon);
-
-            Rand = new Random();
-
-            ActiveDroogon = Droogons[currentDroogon];
+            
         }
 
         public void Attacking(Heros H1, Heros H2, Enemy Dragon)
@@ -87,32 +50,29 @@ namespace Assessment._4
 
         }
 
-        public void ThaUpdate()
+        public void ChoosePlayers(Heros a, Heros b)
         {
-            if(ActiveDroogon.Alive == false)
-            {
-                currentDroogon++;
-            }
 
-            if(ActiveHooman.Alive == false)
-            {
-                Application.Exit();
-            }
+        }
+
+        public void DragonsNameandAttack()
+        {
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Attacking(comboBox1_SelectedIndexChanged, comboBox2_SelectedIndexChanged_1, ActiveDroogon);
+            //Attacking();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Defending(comboBox1_SelectedIndexChanged, comboBox2_SelectedIndexChanged_1, ActiveDroogon);
+            //Defending();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ActiveHooman = currentHooman;
+
         }
 
         private void comboBox2_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -122,17 +82,17 @@ namespace Assessment._4
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            textBox1.Text = ActiveDroogon;
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            textBox2.Text = ActiveDroogon.Attack.ToString;
+            //textBox2.Text = ActiveDrogoon.Attack.ToString();
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            textBox3.Text = ActiveDroogon.Defense.ToString;
+            //textBox3.Text = ActiveDrogoon.Defense.ToString();
         }
     }
 }

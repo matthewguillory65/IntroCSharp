@@ -53,6 +53,10 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Characters.cs" />
+    <Compile Include="FSM.cs" />
+    <Compile Include="IDamagable.cs" />
+    <Compile Include="IDamager.cs" />
+    <Compile Include="IGameManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

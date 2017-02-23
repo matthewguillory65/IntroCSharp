@@ -21,8 +21,8 @@ namespace Assessment._4
     {
         public Heros() { }
 
-        public int m_Attack = 50;
-        int m_Defense = 50;
+        public int m_Attack;
+        int m_Defense;
         bool m_Alive;
         public int Attack { get { return m_Attack; } set { m_Attack = value; } }
         public int Defense { get { return m_Defense; } set { m_Defense = value; } }
@@ -37,8 +37,10 @@ namespace Assessment._4
         public int Attack { get { return m_Attack; } set { m_Attack = value; } }
         public bool Alive { get { return m_Alive; } set { m_Alive = value; } }
         public Enemy(int m_Attack, bool m_Alive) { }
-        int m_Attack = 50;
+        int m_Attack;
         bool m_Alive;
+
+        public Random Rand = new Random();
 
         void Attacking(Heros H1, Heros H2, Enemy Dragon)
         {
@@ -67,7 +69,6 @@ namespace Assessment._4
                 H1.Alive = false; H2.Alive = false;
             }
         }
-
 
     }
 }

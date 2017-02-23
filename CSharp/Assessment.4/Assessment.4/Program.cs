@@ -36,7 +36,7 @@ namespace Assessment._4
             foreach (Heros b in Hoomans) { Hoomans.Add(b); }
             foreach (Enemy z in Drogoons) { Drogoons.Add(z); }
 
-            Random Rand = new Random();
+            
 
             Singleton.Instance.GM = fsm;
             Singleton.Instance.currentHero = currentHero;

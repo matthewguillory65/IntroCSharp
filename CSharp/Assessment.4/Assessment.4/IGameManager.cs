@@ -10,6 +10,8 @@ namespace Assessment._4
     {
         void Start();
         void Idle();
+        void RandomDragon();
+        void ChooseCharacter();
         void Attack();
         void End();
     }

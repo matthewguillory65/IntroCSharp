@@ -8,26 +8,12 @@ namespace Assessment._4
 {
     class FSM
     {
-        public IGameManager currentState;
+        public FSM() { }
 
-        public void ThaUpdate()
-        {
-            //if (ActiveDroogon.Alive == false)
-            //{
-            //    currentDroogon++;
-            //}
+        public string currentState;
 
-            //if (button1_Click == true)
-            //{
-            //    Attack();
-            //}
+        List<string> States;
 
-            //if (ActiveHooman.Alive == false)
-            //{
-            //    Application.Exit();
-            //}
-
-            
-        }
+        
     }
 }

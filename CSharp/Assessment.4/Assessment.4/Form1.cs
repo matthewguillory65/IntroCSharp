@@ -12,53 +12,32 @@ namespace Assessment._4
 {
     public partial class Form1 : Form
     {
+        Singleton SI = Singleton.Instance;
         public Form1()
         {
             InitializeComponent();
-            
+
         }
 
-        public void Attacking(Heros H1, Heros H2, Enemy Dragon)
+        public void CaseStatements()
         {
-            if (H1.Attack + H2.Attack > Dragon.Attack)
+            switch (SI.GM.currentState.ToUpper())
             {
-                Dragon.Alive = false;
-            }
-            if (H1.Attack + H2.Attack < Dragon.Attack)
-            {
-                H1.Alive = false; H2.Alive = false;
-            }
-        }
-        public void Defending(Heros H1, Heros H2, Enemy Dragon)
-        {
-            int NewAttack;
-            int BothDefense;
-            if (H1.Defense + H2.Defense > Dragon.Attack)
-            {
-                BothDefense = H1.Defense + H2.Defense;
-                NewAttack = BothDefense - Dragon.Attack;
-                Dragon.Attack = NewAttack;
-            }
-            if (H1.Defense + H2.Defense < Dragon.Attack)
-            {
-                H1.Alive = false; H2.Alive = false;
+                case "START":
+                    break;
+                case "IDLE":
+                    break;
+                case "CHOOSECHARACTERS":
+                    break;
+                case "ATKORDEF":
+                    break;
+                case "BATTLE":
+                    break;
+                case "END":
+                    break;
             }
         }
 
-        public void StartTurn()
-        {
-
-        }
-
-        public void ChoosePlayers(Heros a, Heros b)
-        {
-
-        }
-
-        public void DragonsNameandAttack()
-        {
-            
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {

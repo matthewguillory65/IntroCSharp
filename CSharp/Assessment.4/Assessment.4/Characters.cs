@@ -6,15 +6,20 @@ using System.Threading.Tasks;
 
 namespace Assessment._4
 {
-
-
-
-    public class Heros
+    public enum StateManager
     {
-        public Heros()
-        {
+        START = 1,
+        IDLE = 2,
+        CHOOSECHARACTERS = 3,
+        ATKORDEF = 4,
+        BATTLE = 5,
+        END = 6,
+    }
 
-        }
+
+    public class Heros 
+    {
+        public Heros() { }
 
         public int m_Attack = 50;
         int m_Defense = 50;
@@ -23,42 +28,45 @@ namespace Assessment._4
         public int Defense { get { return m_Defense; } set { m_Defense = value; } }
         public bool Alive { get { return m_Alive; } set { m_Alive = value; } }
         public Heros(int m_Attack, int m_Defense, bool m_Alive) { }
+        
     }
 
     public class Enemy
     {
         public Enemy() { }
         public int Attack { get { return m_Attack; } set { m_Attack = value; } }
-        public int Defense { get { return m_Defense; } set { m_Defense = value; } }
         public bool Alive { get { return m_Alive; } set { m_Alive = value; } }
-        public Enemy(int m_Attack, int m_Defense, bool m_Alive) { }
+        public Enemy(int m_Attack, bool m_Alive) { }
         int m_Attack = 50;
-        int m_Defense = 50;
         bool m_Alive;
 
-        class Attacks
+        void Attacking(Heros H1, Heros H2, Enemy Dragon)
         {
-            public Attacks() { }
-            void Attack()
+            if (H1.Attack + H2.Attack > Dragon.Attack)
             {
-
+                Dragon.Alive = false;
             }
-        }
-        class Singleton
-        {
-            private static readonly Singleton instance = new Singleton();
-
-            private Singleton() { }
-
-            public static Singleton Instance
+            if (H1.Attack + H2.Attack < Dragon.Attack)
             {
-                get
-                {
-                    return instance;
-                }
+                H1.Alive = false; H2.Alive = false;
             }
         }
 
+        void Defending(Heros H1, Heros H2, Enemy Dragon)
+        {
+            int NewAttack;
+            int BothDefense;
+            if (H1.Defense + H2.Defense > Dragon.Attack)
+            {
+                BothDefense = H1.Defense + H2.Defense;
+                NewAttack = BothDefense - Dragon.Attack;
+                Dragon.Attack = NewAttack;
+            }
+            if (H1.Defense + H2.Defense < Dragon.Attack)
+            {
+                H1.Alive = false; H2.Alive = false;
+            }
+        }
 
 
     }

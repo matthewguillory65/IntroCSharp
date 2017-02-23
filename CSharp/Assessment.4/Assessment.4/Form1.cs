@@ -21,21 +21,21 @@ namespace Assessment._4
 
         public void CaseStatements()
         {
-            switch (SI.GM.currentState.ToUpper())
-            {
-                case "START":
-                    break;
-                case "IDLE":
-                    break;
-                case "CHOOSECHARACTERS":
-                    break;
-                case "ATKORDEF":
-                    break;
-                case "BATTLE":
-                    break;
-                case "END":
-                    break;
-            }
+            //switch (SI.GM.currentState.ToUpper())
+            //{
+            //    case "START":
+            //        break;
+            //    case "IDLE":
+            //        break;
+            //    case "CHOOSECHARACTERS":
+            //        break;
+            //    case "ATKORDEF":
+            //        break;
+            //    case "BATTLE":
+            //        break;
+            //    case "END":
+            //        break;
+            //}
         }
 
 

@@ -25,6 +25,6 @@ namespace Assessment._4
         }
         public Heros currentHero;
         public Enemy currentDrogoon;
-        public FSM GM;
+        //public FSM GM;
     }
 }
